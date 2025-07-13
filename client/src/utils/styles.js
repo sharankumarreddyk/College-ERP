@@ -2,10 +2,11 @@ export const adminData =
   "flex flex-col overflow-y-auto scrollbar-thin scrollbar-track-white scrollbar-thumb-black h-[25rem]  shadow-lg pl-5 rounded-md overflow-x-hidden";
 
 export const adminDataBody =
-  "grid grid-cols-12 hover:scale-105 transition-all duration-150";
+  "grid grid-cols-12 items-start min-h-12";
 
-export const adminDataHeading = "font-bold py-2 px-2";
-export const adminDataBodyFields = "py-2 px-2";
+export const adminDataHeading = "font-bold py-2 px-2 break-words";
+export const adminDataBodyFields = "py-2 px-2 break-words whitespace-normal leading-tight";
+export const adminDataBodyFieldsLong = "py-2 px-2 break-words whitespace-normal leading-tight text-sm max-h-16 overflow-y-auto";
 
 export const adminFormSubmitButton =
   "bg-red-500 w-24 h-8 rounded-md text-white hover:scale-105 hover:bg-red-700 transition-all duration-200 ";

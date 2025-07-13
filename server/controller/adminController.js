@@ -19,10 +19,14 @@ export const adminLogin = async (req, res) => {
       return res.status(404).json(errors);
     }
 
-    // Compare plain text passwords
-    if (existingAdmin.password !== password) {
+    // Compare hashed passwords using bcrypt
+    const isPasswordCorrect = await bcrypt.compare(
+      password,
+      existingAdmin.password
+    );
+    if (!isPasswordCorrect) {
       errors.passwordError = "Invalid Credentials";
-      return res.status(400).json(errors);
+      return res.status(404).json(errors);
     }
 
     // Generate a JWT token
@@ -115,22 +119,7 @@ export const addAdmin = async (req, res) => {
       errors.emailError = "Email already exists";
       return res.status(400).json(errors);
     }
-    const existingDepartment = await Department.findOne({ department });
-    let departmentHelper = existingDepartment.departmentCode;
-    const admins = await Admin.find({ department });
-
-    let helper;
-    if (admins.length < 10) {
-      helper = "00" + admins.length.toString();
-    } else if (admins.length < 100 && admins.length > 9) {
-      helper = "0" + admins.length.toString();
-    } else {
-      helper = admins.length.toString();
-    }
-    var date = new Date();
-    var components = ["ADM", date.getFullYear(), departmentHelper, helper];
-
-    var username = components.join("");
+    var username = email; // Use email as username
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
@@ -246,22 +235,7 @@ export const addFaculty = async (req, res) => {
       errors.emailError = "Email already exists";
       return res.status(400).json(errors);
     }
-    const existingDepartment = await Department.findOne({ department });
-    let departmentHelper = existingDepartment.departmentCode;
-
-    const faculties = await Faculty.find({ department });
-    let helper;
-    if (faculties.length < 10) {
-      helper = "00" + faculties.length.toString();
-    } else if (faculties.length < 100 && faculties.length > 9) {
-      helper = "0" + faculties.length.toString();
-    } else {
-      helper = faculties.length.toString();
-    }
-    var date = new Date();
-    var components = ["FAC", date.getFullYear(), departmentHelper, helper];
-
-    var username = components.join("");
+    var username = email; // Use email as username
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 
@@ -508,22 +482,7 @@ export const addStudent = async (req, res) => {
       errors.emailError = "Email already exists";
       return res.status(400).json(errors);
     }
-    const existingDepartment = await Department.findOne({ department });
-    let departmentHelper = existingDepartment.departmentCode;
-
-    const students = await Student.find({ department });
-    let helper;
-    if (students.length < 10) {
-      helper = "00" + students.length.toString();
-    } else if (students.length < 100 && students.length > 9) {
-      helper = "0" + students.length.toString();
-    } else {
-      helper = students.length.toString();
-    }
-    var date = new Date();
-    var components = ["STU", date.getFullYear(), departmentHelper, helper];
-
-    var username = components.join("");
+    var username = email; // Use email as username
     let hashedPassword;
     const newDob = dob.split("-").reverse().join("-");
 

@@ -139,7 +139,7 @@ const Body = () => {
                       Name
                     </h1>
                     <h1 className={`col-span-2 ${classes.adminDataHeading}`}>
-                      Username
+                      Email
                     </h1>
 
                     <h1 className={`col-span-2 ${classes.adminDataHeading}`}>
@@ -166,7 +166,7 @@ const Body = () => {
                       </h1>
                       <h1
                         className={`col-span-2 ${classes.adminDataBodyFields}`}>
-                        {adm.username}
+                        {adm.email}
                       </h1>
 
                       <h1

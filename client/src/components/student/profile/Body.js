@@ -31,7 +31,7 @@ const Body = () => {
               <div className="flex flex-col space-y-10">
                 <Data label="Name" value={user.result.name} />
                 <Data label="Email" value={user.result.email} />
-                <Data label="Username" value={user.result.username} />
+                <Data label="Email/Username" value={user.result.email} />
                 <Data label="Department" value={user.result.department} />
                 <Data label="Father's Name" value={user.result.fatherName} />
                 <Data label="Mother's Name" value={user.result.motherName} />

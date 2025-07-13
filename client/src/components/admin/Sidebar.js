@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
@@ -19,11 +19,11 @@ const Sidebar = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const logout = () => {
+  const logout = useCallback(() => {
     alert("OOPS! Your session expired. Please Login again");
     dispatch({ type: "LOGOUT" });
-    navigate("/login/adminLogin");
-  };
+    navigate("/");
+  }, [dispatch, navigate]);
   useEffect(() => {
     const token = user?.token;
     if (token) {
@@ -32,7 +32,7 @@ const Sidebar = () => {
     }
 
     setUser(JSON.parse(localStorage.getItem("admin")));
-  }, [navigate]);
+  }, [user?.token, logout]);
 
   return (
     <div className="flex-[0.2] h-full">

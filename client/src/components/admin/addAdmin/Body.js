@@ -50,8 +50,6 @@ const Body = () => {
           contactNumber: "",
           avatar: "",
           joiningYear: Date().split(" ")[3],
-          password: "",
-          username: "",
         });
         dispatch({ type: SET_ERRORS, payload: {} });
         dispatch({ type: ADD_ADMIN, payload: false });
@@ -181,8 +179,6 @@ const Body = () => {
                     contactNumber: "",
                     avatar: "",
                     joiningYear: Date().split(" ")[3],
-                    password: "",
-                    username: "",
                   });
                   setError({});
                 }}

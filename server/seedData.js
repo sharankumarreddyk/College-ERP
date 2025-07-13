@@ -78,7 +78,7 @@ const seedAdmin = async () => {
       name: "Sharan Kumar Reddy K",
       email: "sharankumarreddyk@gmail.com",
       password: hashedPassword,
-      username: "ADM2025CS0101",
+      username: "sharankumarreddyk@gmail.com",
       department: "Computer Science",
       dob: "01-01-1990",
       joiningYear: "2020",
@@ -105,7 +105,7 @@ const seedFaculty = async () => {
         name: "Dr. Faculty Member",
         email: "faculty@gmail.com",
         password: hashedPassword,
-        username: "FAC2025CS0101",
+        username: "faculty@gmail.com",
         gender: "Male",
         designation: "Assistant Professor",
         department: "Computer Science",
@@ -119,7 +119,7 @@ const seedFaculty = async () => {
         name: "Dr. Priya Sharma",
         email: "priya.sharma@college.edu",
         password: hashedPassword,
-        username: "FAC2025CS0102",
+        username: "priya.sharma@college.edu",
         gender: "Female",
         designation: "Associate Professor",
         department: "Computer Science",
@@ -133,7 +133,7 @@ const seedFaculty = async () => {
         name: "Prof. Rajesh Kumar",
         email: "rajesh.kumar@college.edu",
         password: hashedPassword,
-        username: "FAC2025IT0101",
+        username: "rajesh.kumar@college.edu",
         gender: "Male",
         designation: "Professor",
         department: "Information Technology",
@@ -147,7 +147,7 @@ const seedFaculty = async () => {
         name: "Dr. Anita Desai",
         email: "anita.desai@college.edu",
         password: hashedPassword,
-        username: "FAC2025EC0101",
+        username: "anita.desai@college.edu",
         gender: "Female",
         designation: "Assistant Professor",
         department: "Electronics",
@@ -161,7 +161,7 @@ const seedFaculty = async () => {
         name: "Prof. Suresh Patel",
         email: "suresh.patel@college.edu",
         password: hashedPassword,
-        username: "FAC2025ME0101",
+        username: "suresh.patel@college.edu",
         gender: "Male",
         designation: "Professor",
         department: "Mechanical",
@@ -321,7 +321,7 @@ const seedStudents = async (subjects) => {
         name: "Student User",
         email: "student@gmail.com",
         password: hashedPassword,
-        username: "STU2025CS0101",
+        username: "student@gmail.com",
         year: 3,
         subjects: subjects.filter(s => s.year === "3" && s.department === "Computer Science").map(s => s._id),
         gender: "Male",
@@ -340,7 +340,7 @@ const seedStudents = async (subjects) => {
         name: "Aditi Sharma",
         email: "aditi.sharma@student.edu",
         password: hashedPassword,
-        username: "STU2025CS0102",
+        username: "aditi.sharma@student.edu",
         year: 3,
         subjects: subjects.filter(s => s.year === "3" && s.department === "Computer Science").map(s => s._id),
         gender: "Female",
@@ -359,7 +359,7 @@ const seedStudents = async (subjects) => {
         name: "Rohan Gupta",
         email: "rohan.gupta@student.edu",
         password: hashedPassword,
-        username: "STU2025CS0103",
+        username: "rohan.gupta@student.edu",
         year: 2,
         subjects: subjects.filter(s => s.year === "2" && s.department === "Computer Science").map(s => s._id),
         gender: "Male",
@@ -378,7 +378,7 @@ const seedStudents = async (subjects) => {
         name: "Kavya Patel",
         email: "kavya.patel@student.edu",
         password: hashedPassword,
-        username: "STU2025IT0101",
+        username: "kavya.patel@student.edu",
         year: 3,
         subjects: subjects.filter(s => s.year === "3" && s.department === "Information Technology").map(s => s._id),
         gender: "Female",
@@ -397,7 +397,7 @@ const seedStudents = async (subjects) => {
         name: "Arjun Singh",
         email: "arjun.singh@student.edu",
         password: hashedPassword,
-        username: "STU2025EC0101",
+        username: "arjun.singh@student.edu",
         year: 2,
         subjects: subjects.filter(s => s.year === "2" && s.department === "Electronics").map(s => s._id),
         gender: "Male",
@@ -416,7 +416,7 @@ const seedStudents = async (subjects) => {
         name: "Sneha Reddy",
         email: "sneha.reddy@student.edu",
         password: hashedPassword,
-        username: "STU2025ME0101",
+        username: "sneha.reddy@student.edu",
         year: 3,
         subjects: subjects.filter(s => s.year === "3" && s.department === "Mechanical").map(s => s._id),
         gender: "Female",
@@ -724,17 +724,17 @@ const seedDatabase = async () => {
     console.log("ADMIN:");
     console.log("Email: sharankumarreddyk@gmail.com");
     console.log("Password: 12341234");
-    console.log("Username: ADM2025CS0101");
+    console.log("Username: sharankumarreddyk@gmail.com");
     console.log("");
     console.log("FACULTY (Main):");
     console.log("Email: faculty@gmail.com");
     console.log("Password: 12341234");
-    console.log("Username: FAC2025CS0101");
+    console.log("Username: faculty@gmail.com");
     console.log("");
     console.log("STUDENT (Main):");
     console.log("Email: student@gmail.com");
     console.log("Password: 12341234");
-    console.log("Username: STU2025CS0101");
+    console.log("Username: student@gmail.com");
     console.log("");
     console.log("Additional Demo Accounts:");
     console.log("========================");

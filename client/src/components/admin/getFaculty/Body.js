@@ -105,10 +105,10 @@ const Body = () => {
                       Name
                     </h1>
                     <h1 className={`${classes.adminDataHeading} col-span-2 `}>
-                      Username
+                      Email
                     </h1>
                     <h1 className={`${classes.adminDataHeading} col-span-3 `}>
-                      Email
+                      Department
                     </h1>
                     <h1 className={`${classes.adminDataHeading} col-span-3 `}>
                       Designation
@@ -128,11 +128,11 @@ const Body = () => {
                       </h1>
                       <h1
                         className={`col-span-2 ${classes.adminDataBodyFields} `}>
-                        {fac.username}
+                        {fac.email}
                       </h1>
                       <h1
                         className={`col-span-3 ${classes.adminDataBodyFields}`}>
-                        {fac.email}
+                        {fac.department}
                       </h1>
                       <h1
                         className={`col-span-3 ${classes.adminDataBodyFields}`}>

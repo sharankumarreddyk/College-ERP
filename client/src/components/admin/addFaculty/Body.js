@@ -213,8 +213,8 @@ const Body = () => {
                     contactNumber: "",
                     avatar: "",
                     joiningYear: Date().split(" ")[3],
-                    password: "",
-                    username: "",
+                    gender: "",
+                    designation: "",
                   });
                   setError({});
                 }}

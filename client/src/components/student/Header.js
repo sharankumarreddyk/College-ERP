@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
   const logout = () => {
     dispatch({ type: "LOGOUT" });
-    navigate("/login/studentlogin");
+    navigate("/");
   };
   return (
     <div className="flex-[0.05] flex justify-between items-center mx-5 my-2">
